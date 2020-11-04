@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true}))
 
 app.get('/', (req, res, next) => {
-    res.status(200).json({
+    return res.status(200).json({
         code: 1,
         message: 'Bienvenido' 
     })
@@ -21,7 +21,7 @@ app.use('/pokemon', pokemon)
 app.use('/user', user)
 
 app.use((req, res, next) => {
-    res.status(404).json({
+    return res.status(404).json({
         code: 404,
         message: 'Not Found'
     })
