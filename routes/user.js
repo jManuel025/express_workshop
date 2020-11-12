@@ -43,8 +43,8 @@ user.post('/login', async (req, res, next) => {
                 message: token
             })
         }
-        return res.status(401).json({
-            code: 401,
+        return res.status(200).json({
+            code: 200,
             message: 'Usuario o contrasena incorrectos'
         })
     }
